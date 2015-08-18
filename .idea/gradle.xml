@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/section2_activitylifetest" />
             <option value="$PROJECT_DIR$/section2_useintent" />
           </set>
         </option>

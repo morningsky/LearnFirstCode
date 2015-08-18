@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LearnFirstCode.iml" filepath="$PROJECT_DIR$/LearnFirstCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/section2_menu.iml" filepath="$PROJECT_DIR$/app/section2_menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section2_activitylifetest/section2_activitylifetest.iml" filepath="$PROJECT_DIR$/section2_activitylifetest/section2_activitylifetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/section2_useintent/section2_useintent.iml" filepath="$PROJECT_DIR$/section2_useintent/section2_useintent.iml" />
     </modules>
   </component>

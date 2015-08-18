@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Section2_ActivityLifeTest</string>
+    <string name="btn1_text">"启动normalActivity"</string>
+    <string name="btn2_text">"启动dialogActivity"</string>
+    <string name="tag1">"NormalActivity"</string>
+    <string name="tag2">DialogActivity</string>
+
+</resources>
