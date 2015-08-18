@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_startActivity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动显示Intent"/>
+    <Button
+        android:id="@+id/btn_startActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动自定义隐式Intent"/>
+    <Button
+        android:id="@+id/btn_startActivity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动浏览器隐式Intent"/>
+    <Button
+        android:id="@+id/btn_startActivity4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动拨号隐式Intent"/>
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>
