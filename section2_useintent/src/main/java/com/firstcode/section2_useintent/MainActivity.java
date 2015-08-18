@@ -76,7 +76,7 @@ public class MainActivity extends ActionBarActivity {
             case 1:
                 if (resultCode == RESULT_OK)
                 {
-                    String return_data = data.getStringExtra("data_return2");
+                    String return_data = data.getStringExtra("data_return");
                     tv_back.setText(return_data); //将返回的数据显示出来
                 }
                 break;

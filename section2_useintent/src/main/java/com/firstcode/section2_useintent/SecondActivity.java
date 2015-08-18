@@ -31,4 +31,14 @@ public class SecondActivity extends ActionBarActivity {
             }
         });
     }
+
+    @Override
+    //当用户返回键时,也将数据传回上一个activity
+    public void onBackPressed() {
+        String data_return = "我是第二个activity";
+        Intent i =new Intent();
+        i.putExtra("data_return",data_return);
+        setResult(RESULT_OK,i);
+        finish();
+    }
 }
