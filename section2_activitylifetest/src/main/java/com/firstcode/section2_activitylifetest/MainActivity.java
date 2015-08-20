@@ -78,6 +78,8 @@ public class MainActivity extends ActionBarActivity {
         Log.d(TAG,"onRestart");
     }
 
+
+    //保证在回收之前调用
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

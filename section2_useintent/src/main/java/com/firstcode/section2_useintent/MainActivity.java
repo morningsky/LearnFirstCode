@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends BaseActivity {
     private TextView tv_back;
     private Button btn_startActivity1;
     private Button btn_startActivity2;
@@ -22,6 +22,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* 销毁所有创建的activity
+        ActivityCollector.finishAll();
+         */
 
         btn_startActivity1 = (Button) findViewById(R.id.btn_startActivity1);
         btn_startActivity2 = (Button) findViewById(R.id.btn_startActivity2);

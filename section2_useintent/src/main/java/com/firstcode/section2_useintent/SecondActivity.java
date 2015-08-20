@@ -1,5 +1,6 @@
 package com.firstcode.section2_useintent;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 /**
  * Created by sky on 2015/8/18.
  */
-public class SecondActivity extends ActionBarActivity {
+public class SecondActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,17 @@ public class SecondActivity extends ActionBarActivity {
                 finish();
             }
         });
+    }
+    /*
+    功能：设置该activity的创建方式，形参中标明需要传来的数据 便于团队协作（A写了MainActivity' B写了SecondActivity）
+    形参：context:启动本activity的activity data1 data2 表示需要传来的数据
+     */
+    public static void actionStart(Context context,String data1,String data2)
+    {
+        Intent i = new Intent(context,SecondActivity.class);
+        i.putExtra("param1",data1);
+        i.putExtra("param2",data2);
+        context.startActivity(i);
     }
 
     @Override
