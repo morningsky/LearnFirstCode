@@ -4,7 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,10 +23,16 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView lv_fixItem = (ListView) findViewById(R.id.lv_fixItem);
+        lv_listItem = (ListView) findViewById(R.id.lv_fixItem);
         //让适配器将数据绑定listView
         adapter = new FixEventListAdapter(MainActivity.this,R.layout.lv_item_fixevent,fixEvents);
-        lv_fixItem.setAdapter(adapter);
+        lv_listItem.setAdapter(adapter);
+        lv_listItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,"你好啊",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     protected String getTime()

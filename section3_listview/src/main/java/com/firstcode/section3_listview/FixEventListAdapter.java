@@ -1,7 +1,6 @@
 package com.firstcode.section3_listview;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +17,7 @@ public class FixEventListAdapter extends ArrayAdapter<FixEvent> {
     private int resourceId;         //item的布局文件
 
     private View v;
-    private ImageView iv_fixType;
-    private ImageView iv_fixState;
-    private TextView tv_time;
-    private TextView tv_title;
+    private ViewHolder viewHolder;
 
     public FixEventListAdapter(Context context, int resource, List<FixEvent> objects) {
         super(context, resource, objects);
@@ -33,19 +29,34 @@ public class FixEventListAdapter extends ArrayAdapter<FixEvent> {
         if (convertView == null) //如果未曾有过缓存
         {
             v = LayoutInflater.from(getContext()).inflate(resourceId,null);
+            viewHolder = new ViewHolder();
+            viewHolder.iv_fixType = (ImageView) v.findViewById(R.id.iv_fixType);
+            viewHolder.iv_fixState = (ImageView) v.findViewById(R.id.iv_fixState);
+            viewHolder.tv_time = (TextView) v.findViewById(R.id.tv_time);
+            viewHolder.tv_title = (TextView) v.findViewById(R.id.tv_title);
+            v.setTag(viewHolder);//将viewHolder对象保存在view中
         }else {
             v = convertView;
+            viewHolder = (ViewHolder) v.getTag();
         }
-            FixEvent curFixEvent = getItem(position);
-            iv_fixType = (ImageView) v.findViewById(R.id.iv_fixType);
-            iv_fixState = (ImageView) v.findViewById(R.id.iv_fixState);
-            tv_time = (TextView) v.findViewById(R.id.tv_time);
-            tv_title = (TextView) v.findViewById(R.id.tv_title);
-            iv_fixType.setImageResource(curFixEvent.getTypeImageId());
-            iv_fixState.setImageResource(curFixEvent.getStateImageId());
 
-            tv_title.setText(curFixEvent.getTitle());
-            tv_time.setText(curFixEvent.getTime());
+        //将数据填充到视图
+            FixEvent curFixEvent = getItem(position);
+
+            viewHolder.iv_fixType.setImageResource(curFixEvent.getTypeImageId());
+            viewHolder.iv_fixState.setImageResource(curFixEvent.getStateImageId());
+            viewHolder.tv_title.setText(curFixEvent.getTitle());
+            viewHolder.tv_time.setText(curFixEvent.getTime());
         return v;
+    }
+
+
+    //非常实用的优化listview的方法 将控件的实例进行缓存
+    class ViewHolder
+    {
+        ImageView iv_fixType;
+        ImageView iv_fixState;
+        TextView tv_time;
+        TextView tv_title;
     }
 }
