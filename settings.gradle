@@ -1,1 +1,1 @@
-include ':app', ':section2_useintent', ':section2_activitylifetest'
+include ':app', ':section2_useintent', ':section2_activitylifetest', ':section3_dialog'

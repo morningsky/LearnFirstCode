@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">section3_dialog</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="text_btn1">启动普通对话框</string>
+    <string name="text_btn2">启动进度条对话框</string>
+
+</resources>
