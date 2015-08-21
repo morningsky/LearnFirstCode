@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +41,6 @@ public class MainActivity extends ActionBarActivity {
                 //因为子线程不能对UI进行操作
                 case 0:
                     content = (String) msg.obj;
-                    Log.d("sky",content);
                     parseData(content);//解析返回的JSON数据
             }
         }
@@ -68,6 +68,8 @@ public class MainActivity extends ActionBarActivity {
                 {
                     sendMessage();
                     edt_content.clearFocus();
+                }else {
+                    Toast.makeText(MainActivity.this,"你什么都没说，我怎么懂你",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -76,6 +78,15 @@ public class MainActivity extends ActionBarActivity {
 
     public void sendMessage()
     {
+        //如果超过30条记录，则清除10条
+        if (messages.size()>=30)
+        {
+            for (int i =0;i<10;i++)
+            {
+                messages.remove(i);
+            }
+            adapter.notifyDataSetChanged();
+        }
         Message message = new Message(content, 2);
         messages.add(message);
         adapter.notifyDataSetChanged();//动态添加listView的条目
@@ -130,7 +141,6 @@ public class MainActivity extends ActionBarActivity {
             if (code.equals("100000"))
             {
                 String text = myJson.getString("text");
-                Log.d("sky",text);
                 Message message = new Message(text, 1);
                 messages.add(message);
                 adapter.notifyDataSetChanged();//动态添加listView的条目
