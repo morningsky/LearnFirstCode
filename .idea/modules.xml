@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/section3_easychat/section3_easychat.iml" filepath="$PROJECT_DIR$/section3_easychat/section3_easychat.iml" />
       <module fileurl="file://$PROJECT_DIR$/section3_listview/section3_listview.iml" filepath="$PROJECT_DIR$/section3_listview/section3_listview.iml" />
       <module fileurl="file://$PROJECT_DIR$/section4_news/section4_news.iml" filepath="$PROJECT_DIR$/section4_news/section4_news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section5_broadcasttest/section5_broadcasttest.iml" filepath="$PROJECT_DIR$/section5_broadcasttest/section5_broadcasttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section5_mybroadcast/section5_mybroadcast.iml" filepath="$PROJECT_DIR$/section5_mybroadcast/section5_mybroadcast.iml" />
     </modules>
   </component>
 </project>
