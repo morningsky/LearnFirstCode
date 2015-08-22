@@ -111,6 +111,7 @@ public class MainActivity extends ActionBarActivity {
             connection.setConnectTimeout(8000);
             connection.connect();
 
+
             //JAVA IO流读取回复的消息
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),"utf-8"));
             String line = "";

@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/section3_dialog" />
             <option value="$PROJECT_DIR$/section3_easychat" />
             <option value="$PROJECT_DIR$/section3_listview" />
+            <option value="$PROJECT_DIR$/section4_news" />
           </set>
         </option>
       </GradleProjectSettings>
